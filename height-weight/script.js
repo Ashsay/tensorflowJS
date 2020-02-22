@@ -6,6 +6,7 @@ window.onload = async () => {
   const heights = [150, 160, 170];
   const weights = [40, 50, 60];
 
+  // 可视化数据
   tfvis.render.scatterplot(
     { name: "身高体重训练数据" },
     { values: heights.map((x, i)=>({x, y: weights[i]})) },

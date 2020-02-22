@@ -21,6 +21,7 @@ window.onload = async() => {
   }));
 
   model.compile({
+    // 交叉熵
     loss: 'categoricalCrossentropy',
     optimizer: tf.train.adam(0.1),
     metrics: ['accuracy']
@@ -45,6 +46,6 @@ window.onload = async() => {
     ]]);
     const pred = model.predict(input);
     alert(`预测结果：${IRIS_CLASSES[pred.argMax(1).dataSync(0)]}`);
-};
+  };
 
 }

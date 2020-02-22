@@ -38,7 +38,7 @@ window.onload = async() => {
 
   await model.fit(inputs, labels, {
     batchSize: 40,
-    epochs: 20,
+    epochs: 10,
     callbacks: tfvis.show.fitCallbacks(
       { name: '训练过程' },
       ['loss']
